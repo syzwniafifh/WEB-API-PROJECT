@@ -1,0 +1,78 @@
+﻿@model LibraryManagementAPI.Models.Student
+
+<div class="delete-student-container">
+    <h2 class="text-center text-danger">Delete Student</h2>
+
+    <h3 class="text-center mt-4">Are you sure you want to delete this student?</h3>
+
+    <div class="student-details mt-5">
+        <dl class="row">
+            <dt class="col-sm-3 text-end fw-bold">
+                Student Name:
+            </dt>
+            <dd class="col-sm-9">
+                @Model.StudentName
+            </dd>
+            <dt class="col-sm-3 text-end fw-bold">
+                Date of Birth:
+            </dt>
+            <dd class="col-sm-9">
+                @Model.DOB.ToShortDateString()
+            </dd>
+            <dt class="col-sm-3 text-end fw-bold">
+                Email:
+            </dt>
+            <dd class="col-sm-9">
+                @Model.Email
+            </dd>
+        </dl>
+    </div>
+
+    <div class="actions text-center mt-4">
+        <form asp-action="Delete" method="post" class="d-inline">
+            <input type="hidden" asp-for="StudentID" />
+            <button type="submit" class="btn btn-danger me-3">Delete</button>
+        </form>
+        <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+    </div>
+</div>
+
+<style>
+    .delete-student-container {
+        max-width: 700px;
+        margin: 30px auto;
+        padding: 20px;
+        background-color: #f8f9fa;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+        color: #dc3545; /* Bootstrap danger color */
+        margin-bottom: 20px;
+    }
+    h3 {
+        color: #333;
+    }
+    .student-details {
+        border: 1px solid #ddd;
+        padding: 15px;
+        border-radius: 6px;
+        background-color: #ffffff;
+    }
+    .fw-bold {
+        font-weight: bold;
+    }
+    .btn-danger {
+        background-color: #dc3545;
+        border-color: #dc3545;
+    }
+    .btn-secondary {
+        background-color: #6c757d;
+        border-color: #6c757d;
+    }
+    .actions button, .actions a {
+        width: 120px;
+    }
+</style>
+

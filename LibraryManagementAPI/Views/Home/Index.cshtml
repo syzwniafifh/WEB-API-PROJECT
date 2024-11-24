@@ -1,0 +1,79 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to LibraryManagementAPI</h1>
+    <p class="lead">
+        Your one-stop solution for efficient library management.
+        Manage borrowers, books, and streamline your library operations with ease.
+    </p>
+</div>
+
+<div class="overview-section mt-5">
+    <h2 class="mb-4 text-center">Overview</h2>
+    <p style="text-align: justify;">
+        LibraryManagementAPI is a powerful and user-friendly web application designed to help librarians and staff manage library operations effectively.
+        The system provides functionalities to manage borrower records, maintain book inventories, and generate insightful reports.
+        With our strong API, librarians can perform CRUD operations (Create, Read, Update, Delete) seamlessly, making day-to-day library tasks hassle-free.
+    </p>
+    <p style="text-align: justify;">
+        Our mission is to enhance the efficiency of libraries by providing a secure and efficient platform for managing critical data.
+        Whether you're updating book records or managing borrower details, LibraryManagementAPI ensures a streamlined and reliable experience.
+    </p>
+</div>
+
+
+<div class="button-section text-center mt-5">
+    <a asp-controller="Home" asp-action="Aboutus" class="btn btn-primary me-2">Learn More About Us</a>
+    <a asp-controller="Home" asp-action="Faq" class="btn btn-secondary">Visit FAQ Page</a>
+</div>
+
+
+<style>
+    .overview-section, .features-section {
+        padding: 20px;
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        margin: 20px auto;
+        max-width: 800px;
+    }
+
+    h1 {
+        color: #007bff;
+    }
+
+        h2 {
+            color: #007bff;
+            margin-bottom: 15px;
+        }
+
+        p {
+            line-height: 1.6;
+            color: #333;
+        }
+        ul {
+
+        list-style-type: disc;
+        padding-left: 40px;
+        line-height: 1.6;
+    }
+        ul li {
+            color: #333;
+        }
+        .button-section .btn {
+            font-size: 1.1rem;
+            padding: 10px 20px;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+        .btn-secondary {
+            background-color: #6c757d;
+            border-color: #6c757d;
+        }
+</style>
+
